@@ -1,0 +1,70 @@
+extends main_layout
+
+block content
+  .container.mt-4
+    .row
+      // Left Column
+      .col-md-3
+        .list-group.mb-4
+          a.list-group-item.list-group-item-action(href='#') First item
+          a.list-group-item.list-group-item-action(href='#') Second item
+          a.list-group-item.list-group-item-action(href='#') Third item
+      // Right Column
+      .col-md-9
+        .row.g-1
+          // Iterate over this block 12 times
+          .col-md-2
+            .card
+              img.card-img-top(src='https://via.placeholder.com/300x230' alt='Placeholder image')
+              .card-body
+                h5.card-title
+                  i.fas.fa-map-marker-alt.text-primary
+                  |  Suburb
+                p.card-text
+                  i.fas.fa-road.text-primary
+                  |  Address
+                a.btn.btn-primary(href='#' data-bs-toggle='modal' data-bs-target='#exampleModal') More...
+        // End of block
+        nav.mt-4(aria-label='Page navigation example')
+          ul.pagination.justify-content-center
+            li.page-item
+              a.page-link(href='#') Previous
+            li.page-item
+              a.page-link(href='#') 1
+            li.page-item.disabled
+              span.page-link ...
+            li.page-item
+              a.page-link(href='#') 5
+            li.page-item
+              a.page-link(href='#') 6
+            li.page-item.active
+              a.page-link(href='#') 7
+            li.page-item
+              a.page-link(href='#') 8
+            li.page-item
+              a.page-link(href='#') 9
+            li.page-item.disabled
+              span.page-link ...
+            li.page-item
+              a.page-link(href='#') 20
+            li.page-item
+              a.page-link(href='#') Next
+  // Modal
+  #exampleModal.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+    .modal-dialog
+      .modal-content
+        .modal-body
+          img.img-fluid(src='https://via.placeholder.com/400x300' alt='Placeholder')
+          h5.mt-4
+            i.fas.fa-map-marker-alt.text-primary
+            |  Suburb
+          h6
+            i.fas.fa-road.text-primary
+            |  Address
+          p
+            | ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        .modal-footer
+          button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Close
+  
+  // Your navbar code here
+  script(src='/bootstrap.bundle.min.js')

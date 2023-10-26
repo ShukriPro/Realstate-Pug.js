@@ -1,0 +1,12 @@
+@media (max-width: 400px) {
+  .container-fluid {
+    flex-direction: column;
+  }
+}
+
+.modal img {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}

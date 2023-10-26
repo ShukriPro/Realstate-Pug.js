@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "express": "^4.18.2",
+    "pug": "^3.0.2"
+  },
+  "name": "realstate-pug",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "dev": "nodemon app.js & browser-sync start --proxy 'localhost:3000' --files 'views/**/*.pug, public/**/*.css, public/**/*.js'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shukri Ali",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "nodemon": "^3.0.1"
+  }
+}
